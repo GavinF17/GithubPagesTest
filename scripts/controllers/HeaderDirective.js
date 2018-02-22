@@ -5,12 +5,8 @@
         .directive('pageHeader', HeaderDirective);
 
     function HeaderDirective() {
-        var urladd = '';
-        if (window.location.href.indexOf('github.io') !== -1)
-            urladd = '/pagestest';
-
         return {
-            templateUrl: urladd+'/views/common/header.html',
+            templateUrl: '/views/common/header.html',
             restrict: 'E',
             controller: ['$scope', '$location', function ($scope, $location) {
                 $scope.nav = [
